@@ -343,3 +343,13 @@ MIT — see [LICENSE](LICENSE).
 [![Star History Chart](https://api.star-history.com/svg?repos=yuripu1997/proxy-pool&type=Date)](https://star-history.com/#yuripu1997/proxy-pool&Date)
 
 </div>
+
+---
+
+<div align="center">
+
+本项目在 [LINUX DO](https://linux.do) 社区首发分享，感谢社区佬友的反馈与支持。
+
+<sub>This project was first shared on [LINUX DO](https://linux.do) — thanks to the community for the feedback and support.</sub>
+
+</div>

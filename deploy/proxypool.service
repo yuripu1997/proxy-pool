@@ -1,0 +1,30 @@
+[Unit]
+Description=ProxyPool - free proxy pool with auto-scrape, health check and API
+Documentation=https://github.com/yourname/proxy-pool
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# 改成你实际的部署路径和用户
+WorkingDirectory=/opt/proxy-pool
+ExecStart=/usr/bin/python3 /opt/proxy-pool/server.py --bind 0.0.0.0 --port 8787
+Restart=always
+RestartSec=5
+# 想开鉴权就取消下面这行注释并改 token
+# Environment=PROXYPOOL_TOKEN=change-me
+# ExecStart 里加 --token ${PROXYPOOL_TOKEN}
+
+# 基本加固
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/opt/proxy-pool/data
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=proxypool
+
+[Install]
+WantedBy=multi-user.target
